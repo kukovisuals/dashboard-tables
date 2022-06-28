@@ -1,109 +1,121 @@
 import React from 'react';
-// import './App.css';
+import {Menu, Controller} from '../Components';
 
 function Dashboard() {
     return (
         <div className="dashboard">
-            <header className="menu">
-                <div className="menu-container">
-                    <div className="menu-logo">
-                        logo
-                    </div>
-                    <div className="menu-search">
-                        <form>
-                            <label>
-                                <input
-                                    type="text"
-                                />
-                                search for anything
-                            </label>
-                            <button className="menu-button">o</button>
-                        </form>
-                    </div>
-                    <div className="menu-docs">
-                        <span>
-                            <a href="#">Docs</a>
-                        </span>
-                    </div>
-                    <div className="menu-alerts">
-                        <span>
-                            O
-                        </span>
-                    </div>
-                    <div className="menu-profile">
-                        <img/>
-                        <div>
-                            <form>
-                                <select>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
-                                </select>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-
-            <nav className="controller">
-                <div className="controller-container">
-                    <div className="controller-organization">
-                        <span>
-                            *
-                        </span>
-                        <span>
-                            switch orginization
-                        </span>
-                        <span>
-                            ^
-                        </span>
-                    </div>
-                    <div className="controller-organization-option">
-                        <ul>
-                            <span>title</span>
-                            <li>
-                                <span>*</span>
-                                <span>users</span>
-                            </li>
-                        </ul>  
-                    </div>
-                </div>
-            </nav>
+            
+            <Menu/>
+            <Controller/>
+            
 
 
             <main className="dashboard-grid">
                 <div className="dashboard-grid-container">
-                    <div className="dashboard-grid-items">
                         <div className="dashboard-grid-title">
                             <span>
-                                title
+                                Page Title
                             </span>
                         </div>
-                        <div className="dashboard-grid-types">
-                            <div className="dashboard-grid-types-container">
-                                <div className="dashboard-grid-types-image">
-                                    <img/>
-                                </div>
-                                <div className="dashboard-grid-types-name">
+                        <DisplayTypes/>
+                        <DisplayTypes/>
+                        <DisplayTypes/>
+                        <DisplayTypes/>
+
+                        <div className="dashboard-grid-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ORGANIZATION</th>
+                                        <th>USERNAME</th>
+                                        <th>EMAIL</th>
+                                        <th>PHONE NUMBER</th>
+                                        <th>DATE JOINED</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>lendsqr</td>
+                                        <td>MariaAnders</td>
+                                        <td>maria@gmail.com</td>
+                                        <td>8886365544</td>
+                                        <td>May 15, 2020 10:00 AM</td>
+                                        <td>Inactive</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="pagination">
+                            <div className="pagination-container">
+                                <div className="pagination-left">
                                     <span>
-                                        name active savings
+                                        showing
+                                    </span>
+
+                                    <form>
+                                        <select>
+                                            <option value="100">100</option>
+                                            <option value="200">200</option>
+                                            <option value="300">300</option>
+                                            <option value="1000">1000</option>
+                                        </select>
+
+                                    </form>
+
+                                    <span>
+                                        out of 100
                                     </span>
                                 </div>
-                                <div className="dashboard-grid-types-numbers">
-                                    <span>
-                                        numbers
-                                    </span>
+                                <div className="pagination-right">
+                                    <ul>
+                                        <li>
+                                            <button> left </button>
+                                        </li>        
+                                        <li>    
+                                            <span>16</span>
+                                        </li>
+
+                                        <li>
+                                            <span>...</span>
+                                        </li>    
+                                        <li>
+                                            <span>1</span>
+                                        </li>        
+                                        <button> right</button>
+                                    </ul>  
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                 </div>
             </main>
         </div>
     );
+}
+
+
+
+function DisplayTypes(){
+    return (
+        <div className="dashboard-grid-types">
+            <div className="dashboard-grid-types-container">
+                <div className="dashboard-grid-types-image">
+                    <img/>
+                </div>
+                <div className="dashboard-grid-types-name">
+                    <span>
+                        name active savings
+                    </span>
+                </div>
+                <div className="dashboard-grid-types-numbers">
+                    <span>
+                        2,154
+                    </span>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Dashboard;

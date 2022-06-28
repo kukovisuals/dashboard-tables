@@ -88,13 +88,144 @@
 }
 
 
-
+li{
+	list-style: none;
+}
 
 .dashboard-grid{
 	@include borders-app;
-	position: absolute;
+	position: relative;
 	left: 25%;
-	top: 15%;
+	margin-top: 3rem;
 	height: 65vh;
 	width: 70%;
+
+	.dashboard-grid-container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 1rem;
+
+		.dashboard-grid-title{
+			width: 100%;
+		}
+		.dashboard-grid-types{
+			width: 20%;
+			@include borders-app;
+		}
+		.dashboard-grid-table{
+			width: 100%;
+			@include borders-app;
+		}
+		.pagination{
+			width:100%;
+
+			.pagination-container{
+				display:flex;
+
+				.pagination-left{
+					width: 80%;
+					display:flex;
+				}
+				.pagination-right{
+					width: 20%;
+
+					ul{
+						display:flex;
+						flex-direction: row-reverse;
+				    justify-content: space-between;
+				    width: 100%;
+
+						li{
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+.details-grid{
+	@include borders-app;
+	position: relative;
+	left: 25%;
+	margin-top: 3rem;
+	height: 65vh;
+	width: 70%;
+
+	.details-grid-container{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+
+		.details-grid-previous{
+			width: 100%;
+			@include borders-app;
+		}
+		.details-grid-title{
+			width: 100%;
+			@include borders-app;
+			display: flex;
+			justify-content: space-between;
+
+			span{
+				width: 60%;
+			}
+			button{
+				width: 18%;
+			}
+		}
+		.details-grid-table{
+			width: 100%;
+			@include borders-app;
+			display:flex;
+
+			div:nth-child(odd){
+				width: 13%;
+			}
+			div:nth-child(even){
+				width: 20%;
+			}
+		}
+
+
+		.details-options{
+			width: 100%;
+			@include borders-app;
+
+			.details-options-container {
+				display: flex;
+				justify-content: space-around;
+
+			}
+		}
+		.detials-display{
+			width: 100%;
+			@include borders-app;
+
+			.detials-display-container{
+
+				.detials-display-grid{
+					display: flex;
+					flex-wrap:wrap;
+
+
+					.detials-display-grid-title{
+						width: 100%;
+					}
+
+					.detials-display-grid-item{
+						width: 20%;
+						@include borders-app;
+					}
+				}
+			}
+		}
+	}
+
 }
