@@ -1,0 +1,100 @@
+@mixin borders-app{
+	border: 1px solid black;
+}
+.login{
+	@include borders-app;
+	width: 90%;
+	margin: 0 auto;
+	height: 100vh;
+
+	.login-container{
+		margin-top: 1rem;
+		@include borders-app;
+
+		.login-grid{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 25% auto;
+			height: 70vh;
+
+			.login-item1{
+				grid-area: 1 / 1;
+				@include borders-app;
+			}
+			.login-item2{
+				grid-area: 2 / 1;
+				@include borders-app;
+			}
+			.login-item3{
+				grid-area: 2 / 2;
+				@include borders-app;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.dashboard{
+	@include borders-app;
+}
+
+
+.menu{
+	width: 98%;
+	margin: 0 auto;
+	@include borders-app;
+
+	.menu-container{
+		display: flex;
+		flex-direction: row;
+
+		.menu-logo{
+			width: 20%;
+		}
+		.menu-search{
+			width: 60%;
+		}
+		.menu-docs{
+			width: 6%;
+		}
+		.menu-alerts{
+			width: 4%;
+		}
+		.menu-profile{
+			width: 10%;
+		}
+	}
+}
+
+
+.controller{
+	@include borders-app;
+	width: 20%;
+	height: 94vh;
+	position: absolute;
+
+	.controller-container{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+
+
+.dashboard-grid{
+	@include borders-app;
+	position: absolute;
+	left: 25%;
+	top: 15%;
+	height: 65vh;
+	width: 70%;
+}
