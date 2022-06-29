@@ -1,87 +1,87 @@
 @mixin borders-app{
-	border: 1px solid black;
+    border: 1px solid black;
 }
 
 
 @mixin login-field{
-	height: 2rem;
-	border-radius: 0.5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
 }
 
 .login{
-	// @include borders-app;
-	width: 85%;
-	margin: 3rem auto;
-	height: 100vh;
+    // @include borders-app;
+    width: 85%;
+    margin: 3rem auto;
+    height: 100vh;
 
-	.login-container{
-		margin-top: 1rem;
-		// @include borders-app;
+    .login-container{
+        margin-top: 1rem;
+        // @include borders-app;
 
-		.login-grid{
-			display: flex;
-			flex-wrap: wrap;
-			height: 70vh;
-	    // gap: 1rem;
-	    justify-content: space-between;
+        .login-grid{
+            display: flex;
+            flex-wrap: wrap;
+            height: 70vh;
+            // gap: 1rem;
+            justify-content: space-between;
 
-			.login-item1{
-				width: 100%;
-				// @include borders-app;
+            .login-item1{
+                width: 100%;
+                // @include borders-app;
 
-				.login-item1-img{
-					width: 21%;
-				}
-			}
-			.login-item2{
-				width: 45%;
-				// @include borders-app;
+                .login-item1-img{
+                    width: 21%;
+                }
+            }
+            .login-item2{
+                width: 45%;
+                // @include borders-app;
 
-				.login-item2-img{
-					width: 100%;
-				}
-			}
-			.login-item3{
-				width: 45%;
-				// @include borders-app;
+                .login-item2-img{
+                    width: 100%;
+                }
+            }
+            .login-item3{
+                width: 45%;
+                // @include borders-app;
 
-				.login-item3-container{
-					width:80%;
-					margin: 0 auto;
+                .login-item3-container{
+                    width:80%;
+                    margin: 0 auto;
 
-					.login-item3-welcome:last-child{
-						margin-top: 2rem;
+                    .login-item3-welcome:last-child{
+                        margin-top: 2rem;
 
-						input{
-							width:100%;
-							@include login-field;
-							border: 1px solid #c9c9c9;
-						}
-						.login-item3-welcome-form-forgotpassword{
-							margin-top: 1rem;
-						}
-						.login-item3-welcome-form-button{
-							margin-top: 1.5rem;
-							width: 100%;
+                        input{
+                            width:100%;
+                            @include login-field;
+                            border: 1px solid #c9c9c9;
+                        }
+                        .login-item3-welcome-form-forgotpassword{
+                            margin-top: 1rem;
+                        }
+                        .login-item3-welcome-form-button{
+                            margin-top: 1.5rem;
+                            width: 100%;
 
-							button{
-								width: 100%;
-								background-color:#39cdcc;
-								border:none;
-								@include login-field;
-							}
-						}
+                            button{
+                                width: 100%;
+                                background-color:#39cdcc;
+                                border:none;
+                                @include login-field;
+                            }
+                        }
 
-					}
-					.login-item3-welcome-title{
-						font-size: 1.5rem;
-						font-weight: 500;
-						color:  #213f7d;
-					}
-				}
-			}
-		}
-	}
+                    }
+                    .login-item3-welcome-title{
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color:  #213f7d;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -94,334 +94,370 @@
 
 
 .dashboard{
-	// @include borders-app;
+    // @include borders-app;
 }
 
 
 .menu{
-	width: 100%;
-	margin: 0 auto;
-	height: 5rem;
-	// @include borders-app;
-	box-shadow: 9px 1px 13px 4px #efe6e6;
+    width: 100%;
+    margin: 0 auto;
+    height: 5rem;
+    // @include borders-app;
+    box-shadow: 9px 1px 13px 4px #efe6e6;
 
-	.menu-container{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-    padding-top: 1rem;
+    .menu-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 1rem;
 
-		.menu-logo{
-			width: 25%;
+        .menu-logo{
+            width: 25%;
 
-			.menu-logo-img{
-				width: 50%;
-			}
-		}
-		.menu-search{
-			width: 48%;
-			position: relative;
+            .menu-logo-img{
+                width: 50%;
+            }
+        }
+        .menu-search{
+            width: 48%;
+            position: relative;
 
-			input{
-				width: 40%;
-				height: 1.5rem;
-				box-sizing: border-box;
-			}
-			input:focus ~ label,  
-			input:not(:placeholder-shown) ~ label {
-				transform: translateY(1.5rem);
-			}
-			label {
-			  position: absolute;
- 	 			color: #65657b;
-			  left: 20px;
-			  top: 3px;
-			  transform-origin: 0 50%;
-			  transition: transform 200ms, color 200ms;
-			}
+            input{
+                width: 40%;
+                height: 1.5rem;
+                box-sizing: border-box;
+            }
+            input:focus ~ label,  
+            input:not(:placeholder-shown) ~ label {
+                transform: translateY(1.5rem);
+            }
+            label {
+                position: absolute;
+                color: #65657b;
+                left: 20px;
+                top: 3px;
+                transform-origin: 0 50%;
+                transition: transform 200ms, color 200ms;
+            }
 
-			.menu-button{
-				background-color:#39cdcc;
-				border: 0;
-				width: 2rem;
-				height: 1.4rem;
+            .menu-button{
+                background-color:#39cdcc;
+                border: 0;
+                width: 2rem;
+                height: 1.4rem;
 
-				img{
-					width: 34%;
-				}
-			}
-		}
-		.menu-docs{
-			width: 5%;
-		}
-		.menu-alerts{
-			width: 5%;
-		}
-		.menu-profile{
-			width: 10%;
-			display:flex;
-	    align-items: center;
-	
-			.menu-profile-img{
-				width: 40%;
-				border-radius: 10rem;
-			}
-			select{
-				border: 0;
-			}
-		}
-	}
+                img{
+                    width: 34%;
+                }
+            }
+        }
+        .menu-docs{
+            width: 5%;
+        }
+        .menu-alerts{
+            width: 5%;
+        }
+        .menu-profile{
+            width: 10%;
+            display:flex;
+            align-items: center;
+    
+            .menu-profile-img{
+                width: 40%;
+                border-radius: 10rem;
+            }
+            select{
+                border: 0;
+            }
+        }
+    }
 }
 
 
 .controller{
-	// @include borders-app;
-	width: 20%;
-	height: 90.9vh;
-	position: absolute;
-  box-shadow: 1px 10px 13px 4px #efe6e6;
+    // @include borders-app;
+    width: 20%;
+    height: 90.9vh;
+    position: absolute;
+    box-shadow: 1px 10px 13px 4px #efe6e6;
 
-	.controller-container{
-		display: flex;
-		flex-direction: column;
-		width: 90%;
-    margin: 1.5rem auto;
+    .controller-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 1.5rem auto;
 
-		.controller-organization{
-			display: flex;
+        .controller-organization{
+            display: flex;
 
-			.controller-organization-container{
-				width: 15%;
-				
-				img{
-					width: 80%;
-				}
+            .controller-organization-container{
+                width: 15%;
+                
+                img{
+                    width: 80%;
+                }
 
-			}
-			.controller-organization-title{
-				width: 68%;
-			}
-		}
-		.controller-organization-option{
-			margin-top: 2rem;
+            }
+            .controller-organization-title{
+                width: 68%;
+            }
+        }
+        .controller-organization-option{
+            margin-top: 2rem;
 
-			.controller-currentPage-ul{
-				width: 100%;
-				display:flex;
-				flex-wrap:wrap;
+            .controller-currentPage-ul{
+                width: 100%;
+                display:flex;
+                flex-wrap:wrap;
 
-				span{
-					width: 100%;
-				}
-				.controller-currentPage-li-1{
-					width: 15%;
-				}
-				.controller-currentPage-li-2{
-					width: 75%;
-				}
-				img{
-					width: 80%;
-				}
-											
-			}
-		}
+                span{
+                    width: 100%;
+                }
+                .controller-currentPage-li-1{
+                    width: 15%;
+                }
+                .controller-currentPage-li-2{
+                    width: 75%;
+                }
+                img{
+                    width: 80%;
+                }
+                                            
+            }
+        }
 
-		.controller-currentPage{
-			display: flex;
+        .controller-currentPage{
+            display: flex;
 
-			.controller-currentPage-container{
-				width: 15%;
-				
-				img{
-					width: 80%;
-				}
+            .controller-currentPage-container{
+                width: 15%;
+                
+                img{
+                    width: 80%;
+                }
 
-			}
-			.controller-currentPage-title{
-				width: 68%;
-			}
-		}
-	}
+            }
+            .controller-currentPage-title{
+                width: 68%;
+            }
+        }
+    }
 }
 
 
 li{
-	list-style: none;
+    list-style: none;
 }
 
 .dashboard-grid{
-	@include borders-app;
-	position: relative;
-	left: 25%;
-	margin-top: 3rem;
-	height: 65vh;
-	width: 70%;
+    // @include borders-app;
+    position: relative;
+    left: 25%;
+    margin-top: 3rem;
+    height: 65vh;
+    width: 70%;
 
-	.dashboard-grid-container{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 100%;
-		gap: 1rem;
-		justify-content: space-between;
+    .dashboard-grid-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        justify-content: space-between;
 
-		.dashboard-grid-title{
-			width: 100%;
-		}
-		.dashboard-grid-types{
-			width: 20%;
-			@include borders-app;
+        .dashboard-grid-title{
+            width: 100%;
 
-			.dashboard-grid-types-container{
+            span{
+                font-size:1.2rem;
+                font-weight: 500;
+            }
+        }
+        .dashboard-grid-types{
+            width: 20%;    
+            box-shadow: -1px 5px 11px 0px #efe6e6;
 
-				margin: 1rem;
+            // @include borders-app;
 
-				div{
-					margin-top: 0.5rem;
-				}
-				.dashboard-grid-types-image{
-					width: 2rem;
-					height: 2rem;
-					border-radius: 10rem;	
+            .dashboard-grid-types-container{
 
-					img{
-						width: 60%;
-					  display: block;
-					  margin-left: auto;
-					  margin-right: auto;
-					  padding-top: 0.3rem;
-					}
-				}
+                margin: 1rem;
+
+                div{
+                    margin-top: 0.5rem;
+                }
+                .dashboard-grid-types-image{
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 10rem;   
 
 
-				.dashboard-grid-types-name{
-					font-size: 0.6rem;
-				}
-				.dashboard-grid-types-numbers{
-					font-size: 1.3rem;
-					font-weight: 500;
-				}
-			}
-		}
-		.dashboard-grid-table{
-			width: 100%;
-			@include borders-app;
+                    img{
+                        width: 60%;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding-top: 0.3rem;
+                    }
+                }
 
-			table{
-				display: table;
-			}
-			tbody  {
-				border: 1px solid #333;
-			}
-		}
-		.pagination{
-			width:100%;
 
-			.pagination-container{
-				display:flex;
+                .dashboard-grid-types-name{
+                    font-size: 0.6rem;
+                }
+                .dashboard-grid-types-numbers{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+            }
+        }
+        .dashboard-grid-table{
+            width: 100%;    
+            box-shadow: -1px 5px 11px 0px #efe6e6;
 
-				.pagination-left{
-					width: 80%;
-					display:flex;
-				}
-				.pagination-right{
-					width: 20%;
+            table{
+                border-spacing: 0px;
+                // display: table;
+                font-size: 0.7rem;
+                margin: 1rem auto;
+                text-align: left;
+                width: 95%;
 
-					ul{
-						display:flex;
-						flex-direction: row-reverse;
-				    justify-content: space-between;
-				    width: 100%;
+            }
+            th {
+                font-size: 0.6rem;
+                width: 7rem;
 
-						li{
+                .thead-img{
+                    align-items: center;
+                    display: flex;
 
-						}
-					}
-				}
-			}
-		}
-	}
+                    span{
+                        margin-right: 0.2rem;
+                    }
+
+                    img{
+                        width: 1rem;
+                        margin-left: 0.3rem;
+                    }
+                }
+            }
+            td  {
+                border-width: 1px;
+                border-style: none none solid;
+                border-color: gray;
+                padding: 0.5rem 0;
+            }
+        }
+
+        .pagination{
+            width:100%;
+
+            .pagination-container{
+                display:flex;
+
+                .pagination-left{
+                    width: 80%;
+                    display:flex;
+                }
+                .pagination-right{
+                    width: 20%;
+
+                    ul{
+                        display:flex;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        li{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
 
 
 .details-grid{
-	@include borders-app;
-	position: relative;
-	left: 25%;
-	margin-top: 3rem;
-	height: 65vh;
-	width: 70%;
+    @include borders-app;
+    position: relative;
+    left: 25%;
+    margin-top: 3rem;
+    height: 65vh;
+    width: 70%;
 
-	.details-grid-container{
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5rem;
+    .details-grid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
 
-		.details-grid-previous{
-			width: 100%;
-			@include borders-app;
-		}
-		.details-grid-title{
-			width: 100%;
-			@include borders-app;
-			display: flex;
-			justify-content: space-between;
+        .details-grid-previous{
+            width: 100%;
+            @include borders-app;
+        }
+        .details-grid-title{
+            width: 100%;
+            @include borders-app;
+            display: flex;
+            justify-content: space-between;
 
-			span{
-				width: 60%;
-			}
-			button{
-				width: 18%;
-			}
-		}
-		.details-grid-table{
-			width: 100%;
-			@include borders-app;
-			display:flex;
+            span{
+                width: 60%;
+            }
+            button{
+                width: 18%;
+            }
+        }
+        .details-grid-table{
+            width: 100%;
+            @include borders-app;
+            display:flex;
 
-			div:nth-child(odd){
-				width: 13%;
-			}
-			div:nth-child(even){
-				width: 20%;
-			}
-		}
-
-
-		.details-options{
-			width: 100%;
-			@include borders-app;
-
-			.details-options-container {
-				display: flex;
-				justify-content: space-around;
-
-			}
-		}
-		.detials-display{
-			width: 100%;
-			@include borders-app;
-
-			.detials-display-container{
-
-				.detials-display-grid{
-					display: flex;
-					flex-wrap:wrap;
+            div:nth-child(odd){
+                width: 13%;
+            }
+            div:nth-child(even){
+                width: 20%;
+            }
+        }
 
 
-					.detials-display-grid-title{
-						width: 100%;
-					}
+        .details-options{
+            width: 100%;
+            @include borders-app;
 
-					.detials-display-grid-item{
-						width: 20%;
-						@include borders-app;
-					}
-				}
-			}
-		}
-	}
+            .details-options-container {
+                display: flex;
+                justify-content: space-around;
+
+            }
+        }
+        .detials-display{
+            width: 100%;
+            @include borders-app;
+
+            .detials-display-container{
+
+                .detials-display-grid{
+                    display: flex;
+                    flex-wrap:wrap;
+
+
+                    .detials-display-grid-title{
+                        width: 100%;
+                    }
+
+                    .detials-display-grid-item{
+                        width: 20%;
+                        @include borders-app;
+                    }
+                }
+            }
+        }
+    }
 
 }
