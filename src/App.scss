@@ -1,33 +1,84 @@
 @mixin borders-app{
 	border: 1px solid black;
 }
+
+
+@mixin login-field{
+	height: 2rem;
+	border-radius: 0.5rem;
+}
+
 .login{
-	@include borders-app;
-	width: 90%;
-	margin: 0 auto;
+	// @include borders-app;
+	width: 85%;
+	margin: 3rem auto;
 	height: 100vh;
 
 	.login-container{
 		margin-top: 1rem;
-		@include borders-app;
+		// @include borders-app;
 
 		.login-grid{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 25% auto;
+			display: flex;
+			flex-wrap: wrap;
 			height: 70vh;
+	    // gap: 1rem;
+	    justify-content: space-between;
 
 			.login-item1{
-				grid-area: 1 / 1;
-				@include borders-app;
+				width: 100%;
+				// @include borders-app;
+
+				.login-item1-img{
+					width: 21%;
+				}
 			}
 			.login-item2{
-				grid-area: 2 / 1;
-				@include borders-app;
+				width: 45%;
+				// @include borders-app;
+
+				.login-item2-img{
+					width: 100%;
+				}
 			}
 			.login-item3{
-				grid-area: 2 / 2;
-				@include borders-app;
+				width: 45%;
+				// @include borders-app;
+
+				.login-item3-container{
+					width:80%;
+					margin: 0 auto;
+
+					.login-item3-welcome:last-child{
+						margin-top: 2rem;
+
+						input{
+							width:100%;
+							@include login-field;
+							border: 1px solid #c9c9c9;
+						}
+						.login-item3-welcome-form-forgotpassword{
+							margin-top: 1rem;
+						}
+						.login-item3-welcome-form-button{
+							margin-top: 1.5rem;
+							width: 100%;
+
+							button{
+								width: 100%;
+								background-color:#39cdcc;
+								border:none;
+								@include login-field;
+							}
+						}
+
+					}
+					.login-item3-welcome-title{
+						font-size: 1.5rem;
+						font-weight: 500;
+						color:  #213f7d;
+					}
+				}
 			}
 		}
 	}
@@ -43,47 +94,153 @@
 
 
 .dashboard{
-	@include borders-app;
+	// @include borders-app;
 }
 
 
 .menu{
-	width: 98%;
+	width: 100%;
 	margin: 0 auto;
-	@include borders-app;
+	height: 5rem;
+	// @include borders-app;
+	box-shadow: 9px 1px 13px 4px #efe6e6;
 
 	.menu-container{
 		display: flex;
 		flex-direction: row;
+		align-items: center;
+    padding-top: 1rem;
 
 		.menu-logo{
-			width: 20%;
+			width: 25%;
+
+			.menu-logo-img{
+				width: 50%;
+			}
 		}
 		.menu-search{
-			width: 60%;
+			width: 48%;
+			position: relative;
+
+			input{
+				width: 40%;
+				height: 1.5rem;
+				box-sizing: border-box;
+			}
+			input:focus ~ label,  
+			input:not(:placeholder-shown) ~ label {
+				transform: translateY(1.5rem);
+			}
+			label {
+			  position: absolute;
+ 	 			color: #65657b;
+			  left: 20px;
+			  top: 3px;
+			  transform-origin: 0 50%;
+			  transition: transform 200ms, color 200ms;
+			}
+
+			.menu-button{
+				background-color:#39cdcc;
+				border: 0;
+				width: 2rem;
+				height: 1.4rem;
+
+				img{
+					width: 34%;
+				}
+			}
 		}
 		.menu-docs{
-			width: 6%;
+			width: 5%;
 		}
 		.menu-alerts{
-			width: 4%;
+			width: 5%;
 		}
 		.menu-profile{
 			width: 10%;
+			display:flex;
+	    align-items: center;
+	
+			.menu-profile-img{
+				width: 40%;
+				border-radius: 10rem;
+			}
+			select{
+				border: 0;
+			}
 		}
 	}
 }
 
 
 .controller{
-	@include borders-app;
+	// @include borders-app;
 	width: 20%;
-	height: 94vh;
+	height: 90.9vh;
 	position: absolute;
+  box-shadow: 1px 10px 13px 4px #efe6e6;
 
 	.controller-container{
 		display: flex;
 		flex-direction: column;
+		width: 90%;
+    margin: 1.5rem auto;
+
+		.controller-organization{
+			display: flex;
+
+			.controller-organization-container{
+				width: 15%;
+				
+				img{
+					width: 80%;
+				}
+
+			}
+			.controller-organization-title{
+				width: 68%;
+			}
+		}
+		.controller-organization-option{
+			margin-top: 2rem;
+
+			.controller-currentPage-ul{
+				width: 100%;
+				display:flex;
+				flex-wrap:wrap;
+
+				span{
+					width: 100%;
+				}
+				.controller-currentPage-li-1{
+					width: 15%;
+				}
+				.controller-currentPage-li-2{
+					width: 75%;
+				}
+				img{
+					width: 80%;
+				}
+											
+			}
+		}
+
+		.controller-currentPage{
+			display: flex;
+
+			.controller-currentPage-container{
+				width: 15%;
+				
+				img{
+					width: 80%;
+				}
+
+			}
+			.controller-currentPage-title{
+				width: 68%;
+			}
+		}
 	}
 }
 
@@ -106,6 +263,7 @@ li{
 		flex-wrap: wrap;
 		width: 100%;
 		gap: 1rem;
+		justify-content: space-between;
 
 		.dashboard-grid-title{
 			width: 100%;
@@ -113,6 +271,37 @@ li{
 		.dashboard-grid-types{
 			width: 20%;
 			@include borders-app;
+
+			.dashboard-grid-types-container{
+
+				margin: 1rem;
+
+				div{
+					margin-top: 0.5rem;
+				}
+				.dashboard-grid-types-image{
+					width: 2rem;
+					height: 2rem;
+					border-radius: 10rem;	
+
+					img{
+						width: 60%;
+					  display: block;
+					  margin-left: auto;
+					  margin-right: auto;
+					  padding-top: 0.3rem;
+					}
+				}
+
+
+				.dashboard-grid-types-name{
+					font-size: 0.6rem;
+				}
+				.dashboard-grid-types-numbers{
+					font-size: 1.3rem;
+					font-weight: 500;
+				}
+			}
 		}
 		.dashboard-grid-table{
 			width: 100%;

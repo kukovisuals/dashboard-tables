@@ -1,55 +1,27 @@
-import React from 'react';
-// import './App.css';
+import React from "react";
+import {LoginForm} from '../Components';
 
 function Login() {
     return (
         <div className="login">
             <div className="login-container">
                 <div className="login-grid">
-
                     <div className="login-item1">
-                        logo
+                        <img
+                            className="login-item1-img"
+                            src="https://i.ibb.co/6mZbfrt/Rimowa-logo-logotype-emblem.webp"
+                            alt="logo"
+                        />
                     </div>
                     <div className="login-item2">
-                        Image
+                        <img
+                            className="login-item2-img"
+                            src="https://i.ibb.co/2cLYLBY/Screenshot-2022-06-28-164139.png"
+                            alt="logo"
+                        />
                     </div>
-                    <div className="login-item3">
-                        <div className="login-item3-welcome">
-                            <span className="login-item3-welcome-title">Welcome</span>
-                        </div>
-                        <div className="login-item3-welcome">
-                            <span className="login-item3-welcome-title">
-                                <a href="#">details to login</a>
-                            </span>
-                        </div>
-                        <div className="login-item3-welcome">
-                            <div className="login-item3-welcome-form">
-                                <form>
-                                    <label>
-                                        <input
-                                            type="email"
-                                        />
-                                        Email
-                                    </label>
-                                    <br/>
-                                    <label>
-                                        <input
-                                            type="password"
-                                        />
-                                        Password
-                                    </label>
-                                    <br/>
-                                    <span className="login-item3-welcome-form-forgotpassword">
-                                        <a href="#">forgot Password</a>
-                                    </span>
-                                    <div className="login-item3-welcome-form-button">
-                                        <button>LOG IN</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
+                    <LoginForm/>
+                </div>
             </div>
         </div>
     );
