@@ -1,0 +1,76 @@
+
+
+.menu{
+    width: 100%;
+    margin: 0 auto;
+    height: 5rem;
+    // @include borders-app;
+    box-shadow: 9px 1px 13px 4px #efe6e6;
+
+    .menu-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 1rem;
+
+        .menu-logo{
+            width: 25%;
+
+            .menu-logo-img{
+                width: 50%;
+            }
+        }
+        .menu-search{
+            width: 48%;
+            position: relative;
+
+            input{
+                width: 40%;
+                height: 1.5rem;
+                box-sizing: border-box;
+            }
+            input:focus ~ label,  
+            input:not(:placeholder-shown) ~ label {
+                transform: translateY(1.5rem);
+            }
+            label {
+                position: absolute;
+                color: #65657b;
+                left: 20px;
+                top: 3px;
+                transform-origin: 0 50%;
+                transition: transform 200ms, color 200ms;
+            }
+
+            .menu-button{
+                background-color:#39cdcc;
+                border: 0;
+                width: 2rem;
+                height: 1.4rem;
+
+                img{
+                    width: 34%;
+                }
+            }
+        }
+        .menu-docs{
+            width: 5%;
+        }
+        .menu-alerts{
+            width: 5%;
+        }
+        .menu-profile{
+            width: 10%;
+            display:flex;
+            align-items: center;
+    
+            .menu-profile-img{
+                width: 40%;
+                border-radius: 10rem;
+            }
+            select{
+                border: 0;
+            }
+        }
+    }
+}

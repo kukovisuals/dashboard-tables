@@ -19,3 +19,12 @@ export interface DisplayProps {
     amount: number;
     id: number;
 }
+
+export interface ListProps {
+    icon?: string;
+    title: string;
+}
+export interface OptionsProps {
+    header: string;
+    [listOptions: string]: any;
+}
