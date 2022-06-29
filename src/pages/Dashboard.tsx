@@ -1,9 +1,24 @@
 import React from "react";
 import { Menu, Controller } from "../Components";
 import { widget } from "../data/widget";
+import axios from 'axios';
+
+    const url = 'https://random-data-api.com/api/users/random_user?size=100'
 
 function Dashboard() {
-    console.log(widget);
+    const [data, setData] = React.useState([])
+    const [load, setLoad] = React.useState(true)
+    const [, setError] = React.useState('')
+
+
+    React.useEffect(() => {
+        axios(url)
+            .then(res => setData(res.data))
+            .then(res => setLoad(false))
+            .catch(setError)
+    },[]) 
+
+    // data.map((d:any) => console.log(d.username) )
     return (
         <div className="dashboard">
             <Menu />
@@ -24,31 +39,35 @@ function Dashboard() {
                             id={d.id}
                         />
                     ))}
-
                     <div className="dashboard-grid-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ORGANIZATION</th>
-                                    <th>USERNAME</th>
-                                    <th>EMAIL</th>
-                                    <th>PHONE NUMBER</th>
-                                    <th>DATE JOINED</th>
-                                    <th>STATUS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>lendsqr</td>
-                                    <td>MariaAnders</td>
-                                    <td>maria@gmail.com</td>
-                                    <td>8886365544</td>
-                                    <td>May 15, 2020 10:00 AM</td>
-                                    <td>Inactive</td>
-                                </tr>
-                            </tbody>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ORGANIZATION</th>
+                                <th>USERNAME</th>
+                                <th>EMAIL</th>
+                                <th>PHONE NUMBER</th>
+                                <th>DATE JOINED</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                
+                    {!load && data.map( (d:any, i) =>  
+
+                        <TableData
+                            key={d.email}
+                            organization="Lendsqr"
+                            username={d.username}
+                            email={d.email}
+                            phoneNumber={d.phone_number}
+                            dateJoined={d.date_of_birth}
+                            status={d.subscription.status}
+                        />
+                        ).filter( (d,i) => i < 10 )
+                    }
                         </table>
                     </div>
+
                     <div className="pagination">
                         <div className="pagination-container">
                             <div className="pagination-left">
@@ -91,11 +110,39 @@ function Dashboard() {
     );
 }
 
+interface TableProps{
+    organization: string;
+    username: string;
+    email: string;
+    phoneNumber: string;
+    dateJoined: string;
+    status:string;
+}
+
 interface DisplayProps {
     title: string;
     icon: string;
     amount: number;
     id: number;
+}
+
+const TableData = (props: TableProps) => {
+
+    if(props.username === ''){
+        return <pre>loading</pre>
+    }
+    return (
+        <tbody>
+            <tr>
+                <td>lendsqr</td>
+                <td>{props.username}</td>
+                <td>{props.email}</td>
+                <td>{props.phoneNumber}</td>
+                <td>{props.dateJoined}</td>
+                <td>{props.status}</td>
+            </tr>
+        </tbody>
+    )
 }
 
 function DisplayTypes(props: DisplayProps) {

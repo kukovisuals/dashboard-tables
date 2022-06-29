@@ -5,7 +5,6 @@ import {sideBar} from '../../data/sideBar';
 function Controller() {
     const [controller, ] = React.useState(sideBar)
 
-    controller.map( (d) => console.log(d.title) )
     return (
         <nav className="controller">
             <div className="controller-container">
@@ -66,7 +65,6 @@ const SideBarList = (props: OptionsProps) => {
     }
 
     const iterator = props.listOptions[keyGraber[2]]
-    console.log()
 
     return(
         <div className="controller-organization-option">         
