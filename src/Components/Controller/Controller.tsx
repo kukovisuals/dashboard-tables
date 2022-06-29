@@ -1,6 +1,7 @@
 import React from 'react';
 import './Controller.scss';
 import {sideBar} from '../../data/sideBar';
+import {ListProps, OptionsProps} from '../utilities/_namesAndStuff';
 
 function Controller() {
     const [controller, ] = React.useState(sideBar)
@@ -23,14 +24,6 @@ function Controller() {
     );
 }
 
-interface ListProps {
-    icon?: string;
-    title: string;
-}
-interface OptionsProps {
-    header: string;
-    [listOptions: string]: any;
-}
 
 const OrganizationToggle = (props: ListProps) => (
     <div className="controller-organization">
@@ -45,6 +38,7 @@ const OrganizationToggle = (props: ListProps) => (
         </span>
     </div>
 )
+
 const CurrentPage = (props: ListProps) => (
     <div className="controller-currentPage">
         <div className="controller-currentPage-container">
