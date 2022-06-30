@@ -1,7 +1,7 @@
 import React from "react";
 import {
     Menu,
-    Controller,
+    SideBarMenu,
     DashboardElement,
 } from "../Components";
 
@@ -9,7 +9,7 @@ function Dashboard() {
     return (
         <div className="dashboard">
             <Menu />
-            <Controller />
+            <SideBarMenu />
             <DashboardElement />
         </div>
     );
