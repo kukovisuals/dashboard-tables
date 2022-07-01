@@ -1,4 +1,22 @@
+@use "../utilities/themes";
 
+@mixin flex-container($direction, $just, $align, $alto,$espacion){
+    display: flex;
+    flex-wrap: $direction;
+    justify-content: $just;
+    align-items: $align;
+    height: $alto;
+    gap: $espacion;
+}
+
+@mixin svg-circle-text($text_size){
+    font: normal $text_size sans-serif;
+    fill: white;
+}
+.dashboard{
+    height: 100vh;
+    background-color: themes.$black_1;
+}
 .dashboard-grid{
     // @include borders-app;
     position: relative;
@@ -8,12 +26,22 @@
     width: 70%;
 
     .dashboard-grid-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flex-container(row, space-between, normal, auto, 1rem);
         width: 100%;
-        gap: 1rem;
-        justify-content: space-between;
+
+
+        svg{
+            border: 1px solid black;
+            height: 80vh;
+
+
+            .python-text{
+                @include svg-circle-text(0.15rem);
+            }
+            .javaScript-text{
+                @include svg-circle-text(0.15rem);    
+            }
+        }
 
         .dashboard-grid-title{
             width: 100%;

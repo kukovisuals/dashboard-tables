@@ -1,11 +1,11 @@
-
+@use "../utilities/themes";
 
 .menu{
     width: 100%;
     margin: 0 auto;
     height: 5rem;
-    // @include borders-app;
-    box-shadow: 9px 1px 13px 4px #efe6e6;
+    background-color: themes.$black_2;
+    box-shadow: -2px -9px 13px 4px themes.$black_shadow;
 
     .menu-container{
         display: flex;

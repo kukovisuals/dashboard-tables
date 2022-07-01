@@ -1,0 +1,25 @@
+@mixin dark-theme {
+    background-color: themes.$dark_blue;
+    box-shadow: 1px 10px 13px 4px themes.$light_blue;
+    color: themes.$light_blue;
+}
+
+@mixin dark-theme-filter {
+    & img {
+        filter: invert(1);
+    }
+}
+
+@mixin dark-theme-hover {
+    &:hover {
+        background-color: themes.$light_blue;
+    }
+}
+
+@mixin width-img($ancho, $imgW){
+    width: $ancho;
+
+        img {
+            width: $imgW;
+        }
+}

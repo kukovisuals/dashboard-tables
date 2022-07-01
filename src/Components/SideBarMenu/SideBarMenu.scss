@@ -1,8 +1,8 @@
 @use "../utilities/themes";
 
 @mixin dark-theme {
-    background-color: themes.$dark_blue;
-    box-shadow: 1px 10px 13px 4px themes.$light_blue;
+    background-color: themes.$black_2;
+    box-shadow: -14px 28px 22px 5px themes.$black_shadow;
     color: themes.$light_blue;
 }
 
@@ -15,7 +15,6 @@
 @mixin dark-theme-hover {
     &:hover {
         background-color: themes.$light_blue;
-        color: themes.$dark_blue;
     }
 }
 
@@ -34,7 +33,6 @@
     align-items: $align;
     height: $alto;
 }
-
 
 
 
@@ -65,6 +63,11 @@
                 li {
                     span {
                         font-size: themes.$font_dsk_sidebar_title;
+                        color: themes.$light_blue;
+                       
+                        &:hover{
+                            color:themes.$dark_blue;
+                        }
                     }
                 }
             }
