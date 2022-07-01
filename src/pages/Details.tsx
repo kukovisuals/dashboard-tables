@@ -1,5 +1,5 @@
 import React from 'react';
-import {Menu, Controller} from '../Components';
+import {Menu, SideBarMenu} from '../Components';
 
 
 function Details() {
@@ -7,7 +7,7 @@ function Details() {
         <div className="Details">
             
             <Menu/>
-            <Controller/>
+            <SideBarMenu/>
                     
             <main className="details-grid">
                 <div className="details-grid-container">

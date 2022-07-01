@@ -4,6 +4,10 @@ export const sideBar = [
 		title: 'customers',
 		customers: [
 			{
+				icon: '',
+				title: 'customers',
+			},
+			{
 				icon: 'https://visualpharm.com/assets/250/User%20Groups-595b40b65ba036ed117d1d46.svg',
 				title: 'Users',
 			},
@@ -40,6 +44,10 @@ export const sideBar = [
 		id: 2,
 		title: 'businesses',
 		businesses: [
+			{
+				icon: '',
+				title: 'businesses',
+			},
 			{
 				icon: 'https://visualpharm.com/assets/562/Building-595b40b75ba036ed117d56f3.svg',
 				title: 'Organization',

@@ -1,12 +1,12 @@
 import useFetch from "../Hook/useFetch";
 import {HeaderProps, TableProps} from '../utilities/_namesAndStuff';
-
+import './TableSheet.scss';
 
 const url = "https://random-data-api.com/api/users/random_user?size=100";
 
 function TableSheet() {
     const { data, load, error } = useFetch(url);
-
+    console.log(error)
     return (
         <div className="dashboard-grid-table">
             <table>

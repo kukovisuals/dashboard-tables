@@ -1,0 +1,118 @@
+@use "../utilities/themes";
+
+@mixin dark-theme {
+    background-color: themes.$black_2;
+    box-shadow: -14px 28px 22px 5px themes.$black_shadow;
+    color: themes.$light_blue;
+}
+
+@mixin dark-theme-filter {
+    & img {
+        filter: invert(1);
+    }
+}
+
+@mixin dark-theme-hover {
+    &:hover {
+        background-color: themes.$light_blue;
+    }
+}
+
+@mixin width-img($ancho, $imgW){
+    width: $ancho;
+
+        img {
+            width: $imgW;
+        }
+}
+
+@mixin flex-container($direction, $just, $align, $alto){
+    display: flex;
+    flex-wrap: $direction;
+    justify-content: $just;
+    align-items: $align;
+    height: $alto;
+}
+
+
+
+.controller-dark-theme {
+    @include dark-theme;
+    width: 20%;
+    height: 90.9vh;
+    position: absolute;
+
+    .controller-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0 0 auto;
+
+        .controller-organization {
+            @include flex-container(nowrap, space-evenly, center, 3rem);
+            @include dark-theme-filter;
+            @include dark-theme-hover;
+            cursor: pointer;
+
+            .controller-organization-container {
+                @include width-img(themes.$img_left_sidebar, 100%);
+            }
+
+            .controller-organization-title {
+                width: themes.$title_sidebar;
+
+                li {
+                    span {
+                        font-size: themes.$font_dsk_sidebar_title;
+                        color: themes.$light_blue;
+                       
+                        &:hover{
+                            color:themes.$dark_blue;
+                        }
+                    }
+                }
+            }
+
+            .controller-organization-img {  
+                @include width-img(13%, 80%);
+            }
+        }
+
+        .controller-organization-option {
+            @include dark-theme-filter;
+
+            .controller-currentPage-ul {
+                margin-top: 1.5rem;
+
+                .controller-currentPage-li-1 {
+                    @include flex-container(wrap, space-evenly, center, 1.5rem);
+                    cursor: pointer;
+
+                    @include dark-theme-hover;
+
+                    .controller-currentPage-container-li {
+                        width: 10%;
+                    }
+
+                    .controller-currentPage-li-2 {
+                        width: 57%;
+                    }
+                }
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        .controller-currentPage {
+            @include flex-container(nowrap, normal, center, 3rem);
+
+            .controller-currentPage-container {
+                @include width-img(15%, 80%);
+            }
+            .controller-currentPage-title {
+                width: 68%;
+            }
+        }
+    }
+}

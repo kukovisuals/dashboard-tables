@@ -23,6 +23,7 @@ export interface DisplayProps {
 export interface ListProps {
     icon?: string;
     title: string;
+    iconRight?:string;
 }
 export interface OptionsProps {
     header: string;

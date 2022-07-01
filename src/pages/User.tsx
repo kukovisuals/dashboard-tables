@@ -1,12 +1,14 @@
-import React from 'react';
-// import './App.css';
+import React from "react";
+import { Menu, SideBarMenu } from "../Components";
 
 function User() {
-  return (
-    <div className="User">
-      user
-    </div>
-  );
+    return (
+        <div className="User">
+            <Menu />
+            <SideBarMenu />
+            user
+        </div>
+    );
 }
 
 export default User;
